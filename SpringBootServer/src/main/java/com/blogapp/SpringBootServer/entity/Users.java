@@ -1,16 +1,19 @@
 package com.blogapp.SpringBootServer.entity;
 
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 
 @Entity
 public class Users {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String lastname;
     private String email;
     private String password;
 
+    @Column(name = "favorite")
     private String isFavorite;
     private String comment;
 
