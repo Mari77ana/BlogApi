@@ -14,7 +14,7 @@ public class Users {
     private String password;
 
     @Column(name = "favorite")
-    private String isFavorite;
+    private Boolean isFavorite;
     private String comment;
 
     public int getId() {
@@ -57,11 +57,11 @@ public class Users {
         this.password = password;
     }
 
-    public String getIsFavorite() {
+    public Boolean getIsFavorite() {
         return isFavorite;
     }
 
-    public void setIsFavorite(String isFavorite) {
+    public void setIsFavorite(Boolean isFavorite) {
         this.isFavorite = isFavorite;
     }
 

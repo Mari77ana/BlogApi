@@ -23,7 +23,10 @@ public class UsersDao {
         Streamable.of(repository.findAll())
                 .forEach(users::add);
         return users;
+    }
 
+    public void deleteAllUsers(Users user) {
+        repository.delete(user);
     }
     public void getUserById(int getUserId){
         repository.findById(getUserId);
@@ -34,5 +37,5 @@ public class UsersDao {
     }
 
 
-    
+
 }
