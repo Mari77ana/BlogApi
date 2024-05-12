@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsersDao {
@@ -28,8 +29,8 @@ public class UsersDao {
     public void deleteAllUsers(Users user) {
         repository.delete(user);
     }
-    public void getUserById(int getUserId){
-        repository.findById(getUserId);
+    public Users getUserById(int userId){
+        return repository.findById(userId).orElse(null);
     }
 
     public void deleteUserById(int userId){
