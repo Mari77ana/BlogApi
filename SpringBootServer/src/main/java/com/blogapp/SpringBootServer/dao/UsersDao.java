@@ -14,8 +14,8 @@ public class UsersDao {
     @Autowired // dependency injection
     private UsersRepository repository;
 
-    public void saveUser(Users user){
-        repository.save(user);
+    public Users saveUser(Users user){  // change to return for response in Postman
+        return repository.save(user);
     }
 
     public List<Users> getAllUsers(){

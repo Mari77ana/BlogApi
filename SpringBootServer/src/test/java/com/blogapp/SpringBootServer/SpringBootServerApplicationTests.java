@@ -22,18 +22,17 @@ class SpringBootServerApplicationTests {
 	@Test
 	void addUsersTest() {
 		Users user = new Users();
-		user.setName("Emilia");
-		user.setEmail("Emilia@mail");
-		user.setLastname("Wilton");
+		user.setName("Lina");
+		user.setEmail("Lina@mail");
+		user.setLastname("Larson");
 		user.setComment("Hello");
-		user.setIsFavorite(true);
 		usersDao.saveUser(user);
 	}
 
 	@Test
 	void getAllUsers() {
-		List<Users> users = usersDao.getAllUsers();
-		System.out.println(users);
+		List<Users> user = usersDao.getAllUsers();
+		System.out.println(user);
 
 	}
 

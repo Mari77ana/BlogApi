@@ -13,8 +13,11 @@ public class Users {
     private String email;
     private String password;
 
-    @Column(name = "favorite")
+    /*
+    @Column(name = "is_favorite") // had favorite
     private Boolean isFavorite;
+
+     */
     private String comment;
 
     public int getId() {
@@ -56,7 +59,7 @@ public class Users {
     public void setPassword(String password) {
         this.password = password;
     }
-
+/*
     public Boolean getIsFavorite() {
         return isFavorite;
     }
@@ -64,6 +67,8 @@ public class Users {
     public void setIsFavorite(Boolean isFavorite) {
         this.isFavorite = isFavorite;
     }
+
+ */
 
     public String getComment() {
         return comment;
@@ -81,7 +86,7 @@ public class Users {
                 ", lastname='" + lastname + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", isFavorite='" + isFavorite + '\'' +
+              //  ", isFavorite='" + isFavorite + '\'' +
                 ", comment='" + comment + '\'' +
                 '}';
     }
